@@ -196,13 +196,11 @@ class DSA {
       }
 
       return true
+
     }
 
   }
 
-  capitalization(){
-
-  }
 
 }
 
@@ -213,4 +211,5 @@ let a = new DSA()
 //a.maxChar("aaaaaabdul")
 //a.fizzBuzz(15)
 //a.arrayChunk([1,2,3,4,5,6,7,8,9,10],5)
-//a.anagram("RAIL! SAFETY!",'fairy tales')
+a.anagram("hello","llohe")
+a.anagram("RAIL! SAFETY!",'fairy tales')
