@@ -200,7 +200,21 @@ class DSA {
 
   }
 
-  capitalization(){
+  capitalization(str1){
+
+    let wordsArr = str1.split(" ")
+    let capArr = []
+
+    for(let i = 0; i < wordsArr.length; i++ ){
+      let capital = wordsArr[i][0].toUpperCase()
+      let ol = wordsArr[i].slice(1)
+      let newWord = capital + ol  
+      capArr.push(newWord)
+    }
+
+    let capSentence = capArr.join(" ")
+
+    return capSentence
 
   }
 
@@ -214,3 +228,4 @@ let a = new DSA()
 //a.fizzBuzz(15)
 //a.arrayChunk([1,2,3,4,5,6,7,8,9,10],5)
 //a.anagram("RAIL! SAFETY!",'fairy tales')
+a.capitalization('a short sentence')
