@@ -196,11 +196,45 @@ class DSA {
       }
 
       return true
-
     }
 
   }
 
+  capitalization(str1){
+
+    let wordsArr = str1.split(" ")
+    let capArr = []
+
+    for(let i = 0; i < wordsArr.length; i++ ){
+      let capital = wordsArr[i][0].toUpperCase()
+      let ol = wordsArr[i].slice(1)
+      let newWord = capital + ol  
+      capArr.push(newWord)
+    }
+
+    let capSentence = capArr.join(" ")
+
+    return capSentence
+
+  }
+
+  steps(n){
+    //On^2
+    //for loop rows
+    //for loop columns
+
+    for(let r = 0; r< n; r++){
+      let stair = ""
+      for(let c = 0; c < n; c++){
+        if( c > r){
+          stair += " "
+        }else{
+          stair += "#"
+        }
+      }
+      console.log(stair)
+    }
+  }
 
 }
 
@@ -211,5 +245,6 @@ let a = new DSA()
 //a.maxChar("aaaaaabdul")
 //a.fizzBuzz(15)
 //a.arrayChunk([1,2,3,4,5,6,7,8,9,10],5)
-a.anagram("hello","llohe")
-a.anagram("RAIL! SAFETY!",'fairy tales')
+//a.anagram("RAIL! SAFETY!",'fairy tales')
+//a.capitalization('a short sentence')
+a.steps(40)

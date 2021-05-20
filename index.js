@@ -218,6 +218,24 @@ class DSA {
 
   }
 
+  steps(n){
+    //On^2
+    //for loop rows
+    //for loop columns
+
+    for(let r = 0; r< n; r++){
+      let stair = ""
+      for(let c = 0; c < n; c++){
+        if( c > r){
+          stair += " "
+        }else{
+          stair += "#"
+        }
+      }
+      console.log(stair)
+    }
+  }
+
 }
 
 let a = new DSA()
@@ -228,4 +246,5 @@ let a = new DSA()
 //a.fizzBuzz(15)
 //a.arrayChunk([1,2,3,4,5,6,7,8,9,10],5)
 //a.anagram("RAIL! SAFETY!",'fairy tales')
-a.capitalization('a short sentence')
+//a.capitalization('a short sentence')
+//a.steps(40)
